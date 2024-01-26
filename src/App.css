@@ -51,6 +51,25 @@ div{
   display: flex;
 }
 
+#lolIcon{
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-size: cover;
+}
+
+#perDayTextContain{
+  display: flex;
+  justify-content: center;
+}
+
+#perDayText{
+  display: inline-flex;
+  height: 50px;
+  align-items: center;
+  font-size: 20px;
+}
+
 #matchList{
   display: inline-block;
   background-color: gray;
