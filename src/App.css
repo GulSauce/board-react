@@ -36,3 +36,38 @@
     transform: rotate(360deg);
   }
 }
+
+div{
+  box-sizing: border-box;
+}
+
+#title{
+  background-color : blue;
+  margin:0;
+  padding:'10px';
+}
+
+#bottom{
+  display: flex;
+}
+
+#matchList{
+  display: inline-block;
+  background-color: gray;
+  width: 50%;
+}
+
+#articleContain{
+  display: inline-block;
+  background-color: gray;
+  width: 50%;
+}
+
+.articlePreview{
+  border: 1px solid black;
+}
+
+.article{
+  background-color: gray;
+  text-align: left;
+}
