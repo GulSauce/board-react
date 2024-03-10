@@ -12,6 +12,12 @@
     "no-unused-vars": "off",
     "prefer-const": "off",
     "arrow-body-style": "off",
-    "import/no-unresolved" : "off"
+    "import/no-unresolved": "off",
+    "import/extensions": "off",
+    "import/prefer-default-export": "off",
+    "no-await-in-loop": "off",
+    "no-plusplus": "off",
+    "no-param-reassign": "off",
+    "no-undef": "off"
   }
 }

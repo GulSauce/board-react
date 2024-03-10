@@ -1,67 +1,47 @@
-import { useState } from 'react'
-import { Button } from 'react-bootstrap'
 import './App.css'
-import {title, content} from '@src/data/data'
-import {SDMSTitle, SDMSStatus} from '@src/components/header'
-import {MatchHistory} from '@src/components/match_history'
-import {ArticlePreview, Article} from '@src/components/article'
+import { SDMSTitle, SDMSStatus } from 'components/header'
+import { MatchHistory } from 'components/match_history'
+import { ArticleList } from 'components/articleList'
+import { WriteArticle } from 'components/writeArticle'
+import { Article } from 'components/article'
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link,
+  BrowserRouter,
+} from 'react-router-dom'
 
 function App() {
-  let [noProblemDayCount, updateDay] = useState(0)
-  let [chickenCount, updateChickenCount] = useState(0)
-  let [articleList, updateArticleList] = useState(title)
-  let [curArticleTitle, updateCurArticleTitle] = useState({})
-  let [userInput, updateUserinput] = useState({})
-  let [like, updateLike] = useState([0, 0, 0])
-  let [isArticleOpen, updateArticleOpen] = useState('close');
-
   return (
     <div className="App">
-      <SDMSTitle></SDMSTitle>
+      <BrowserRouter>
+        <SDMSTitle></SDMSTitle>
+        <SDMSStatus></SDMSStatus>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <div id="bottom">
+                <MatchHistory></MatchHistory>
 
-      <SDMSStatus noProblemDayCount={noProblemDayCount} chickenCount={chickenCount}></SDMSStatus>
-
-      <div id="bottom">
-
-        <MatchHistory></MatchHistory>
-
-        <div id='articleContain'>
-          <h3>게시글</h3>
-          <input onChange={(e) => { updateUserinput(e.target.value) }}></input>
-
-          <Button variant="light" onClick={() => {
-            const newLike = [0, ...like]
-            updateLike(newLike)
-            const newArticle = [userInput, ...articleList]
-            updateArticleList(newArticle)
-          }}>글쓰기</Button>
-
-          {
-            articleList.map((curTitle, index) =>
-              <ArticlePreview
-                key={index}
-                like={like}
-                title={title}
-                index={index}
-                updateLike={updateLike}
-                updateArticleOpen={updateArticleOpen}
-                updateCurArticleTitle={updateCurArticleTitle}>
-              </ArticlePreview>)
-          }
-
-          {
-            isArticleOpen === 'open' ?
-              <Article
-                curArticleTitle={curArticleTitle}
-                updateCurArticleTitle={updateCurArticleTitle}
-                articleList={articleList}
-                updateArticleList={updateArticleList}
-                updateArticleOpen={updateArticleOpen}>
-              </Article> : null
-          }
-
-        </div>
-      </div>
+                <div id="articleContain">
+                  <h3>자유게시판</h3>
+                  <div id="articleNavBar">
+                    <Link id="writeArticle" to="/article/write"></Link>
+                  </div>
+                  <ArticleList></ArticleList>
+                </div>
+              </div>
+            }
+          />
+          <Route
+            path="/article/write"
+            element={<WriteArticle></WriteArticle>}
+          />
+          <Route path="/article/:articleId" element={<Article></Article>} />
+        </Routes>
+      </BrowserRouter>
     </div>
   )
 }

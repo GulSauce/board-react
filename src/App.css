@@ -1,5 +1,6 @@
-.App {
-  text-align: center;
+html {
+  min-width: fit-content;
+  min-height: fit-content;
 }
 
 .App-logo {
@@ -10,6 +11,23 @@
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+#editior {
+  height: fit-content;
+}
+
+.react-quill {
+  width: 1000px;
+  height: 600px;
+}
+
+@media (max-width: 900px) {
+  .react-quill {
+    width: 380px;
+    height: 400px;
+    margin-bottom: 80px;
   }
 }
 
@@ -37,56 +55,216 @@
   }
 }
 
-div{
+div {
   box-sizing: border-box;
 }
 
-#title{
-  background-color : blue;
-  margin:0;
-  padding:'10px';
+#title {
+  background-color: rgb(83, 131, 232);
+  text-align: center;
+  margin: 0;
+  padding: '10px';
+  padding: 10px;
 }
 
-#bottom{
+#matchStatus {
+  text-align: center;
+  background-color: rgb(255, 185, 0);
+  padding: 10px;
+}
+
+#bottom {
   display: flex;
 }
 
-#lolIcon{
+#lolIcon {
   display: inline-block;
   width: 50px;
   height: 50px;
   background-size: cover;
 }
 
-#perDayTextContain{
+#perDayTextContain {
   display: flex;
   justify-content: center;
 }
 
-#perDayText{
+#perDayText {
   display: inline-flex;
   height: 50px;
   align-items: center;
   font-size: 20px;
 }
 
-#matchList{
+#matchList {
   display: inline-block;
-  background-color: gray;
   width: 50%;
 }
 
-#articleContain{
+#articleContain {
   display: inline-block;
-  background-color: gray;
-  width: 50%;
+  text-align: center;
+  width: 45%;
 }
 
-.articlePreview{
+.articlePreview {
+  padding-top: 5px;
+  padding-bottom: 5px;
   border: 1px solid black;
 }
 
-.article{
+.article {
   background-color: gray;
   text-align: left;
+}
+
+#articleNavBar {
+  display: flex;
+  justify-content: right;
+}
+
+#writeArticle {
+  display: block;
+  width: 100px;
+  height: 30px;
+  color: black;
+  text-decoration-line: none;
+  background-image: url('../public/img/write_article_btn.png');
+  background-size: cover;
+}
+
+.idAndNickname {
+  display: inline-block;
+  width: 40%;
+}
+
+.articleId {
+  display: inline-block;
+  width: 20%;
+}
+
+.nickname {
+  display: inline-block;
+  width: 80%;
+}
+
+.articleTitle {
+  display: inline-block;
+  text-align: left;
+  width: 60%;
+}
+
+.headerTitle {
+  text-align: center;
+}
+
+#writeContain {
+  display: flex;
+  margin: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (max-width: 900px) {
+  #writeContain {
+    margin: 10px;
+  }
+}
+
+#nicknameInput {
+  display: inline-block;
+}
+
+#passwordInput {
+  display: inline-block;
+}
+
+#titleInput {
+  display: block;
+  width: 700px;
+}
+
+@media (max-width: 900px) {
+  #titleInputn {
+    width: 380px;
+  }
+}
+
+#submit {
+  display: block;
+  background-color: rgb(83, 131, 232);
+  color: white;
+  padding: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+#writeHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 1000px;
+}
+
+@media (max-width: 900px) {
+  #writeHeader {
+    width: 380px;
+  }
+}
+
+.headerInput {
+  margin: 5px;
+  margin-left: 0;
+  padding: 10px;
+}
+
+@media (max-width: 900px) {
+  .headerInput {
+    height: 30px;
+  }
+}
+
+#writeForm {
+  width: fit-content;
+}
+
+#submitBtnContain {
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media (max-width: 900px) {
+  #submitBtnContain {
+    width: 380px;
+  }
+}
+
+#currentContain {
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 900px) {
+  #currentContain {
+    width: 500px;
+  }
+}
+
+#currentTitle {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#currentNickname {
+  border-bottom: 1px solid black;
+}
+
+#currentContent {
+  margin-top: 10px;
 }

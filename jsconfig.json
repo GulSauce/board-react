@@ -1,16 +1,6 @@
 {
   "compilerOptions": {
-    "baseUrl": "./",
-    "paths": {
-      "@/*": ["./*"],
-      "@router/*": ["router/*"],
-      "@utility/*": ["utility/*"],
-      "@model/*": ["model/*"],
-      "@database/*": ["database/*"],
-      "@middleware/*": ["middleware/*"],
-      "@socket/*": ["socket/*"],
-      "@game/*": ["game/*"]
-    }
+    "baseUrl": "src"
   },
-  "exclude": ["node_modules"]
+  "include": ["src"]
 }
