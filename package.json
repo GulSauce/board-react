@@ -9,7 +9,7 @@
     "axios": "1.6.7",
     "dompurify": "3.0.9",
     "dotenv": "16.4.5",
-    "quill-image-resize-module-ts": "3.0.3",
+    "quill-image-resize-module-fix-for-mobile": "3.0.4",
     "react": "18.2.0",
     "react-bootstrap": "2.10.0",
     "react-dom": "18.2.0",

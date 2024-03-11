@@ -1,5 +1,5 @@
 import { useMemo, useRef, useState } from 'react'
-import { ImageResize } from 'quill-image-resize-module-ts'
+import { ImageResize } from 'quill-image-resize-module'
 import { useNavigate } from 'react-router-dom'
 import 'react-quill/dist/quill.snow.css'
 import ReactQuill, { Quill } from 'react-quill'
@@ -53,7 +53,7 @@ export const WriteArticle = () => {
     // 서버로 FormData 전송
     try {
       const id = (
-        await axios.post('http://loasim.com/api/article', formData, {
+        await axios.post('https://loasim.com/api/article', formData, {
           headers: {
             'Content-Type': 'multipart/form-data',
           },
