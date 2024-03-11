@@ -26,7 +26,7 @@ export const ArticleList = () => {
     const fetchArticleList = async () => {
       try {
         const response = await axios.get(
-          'http://loasim.com/article/list?page=1',
+          'http://loasim.com/api/article/list?page=1',
         )
         setArticleList(response.data.list)
       } catch (error) {

@@ -53,7 +53,7 @@ export const WriteArticle = () => {
     // 서버로 FormData 전송
     try {
       const id = (
-        await axios.post('http://loasim.com/article', formData, {
+        await axios.post('http://loasim.com/api/article', formData, {
           headers: {
             'Content-Type': 'multipart/form-data',
           },
