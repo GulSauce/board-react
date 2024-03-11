@@ -1,5 +1,5 @@
 import { useMemo, useRef, useState } from 'react'
-import { ImageResize } from 'quill-image-resize-module'
+import { ImageResize } from 'quill-image-resize-module-ts'
 import { useNavigate } from 'react-router-dom'
 import 'react-quill/dist/quill.snow.css'
 import ReactQuill, { Quill } from 'react-quill'
